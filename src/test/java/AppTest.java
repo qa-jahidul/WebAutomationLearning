@@ -1,10 +1,11 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class AppTest {
-    public static void main(String[] args){
+    @Test
+    public void testWebPageLoad(){
         WebDriver driver = new ChromeDriver();
         driver.get("https://google.com");
-        driver.close();
     }
 }
