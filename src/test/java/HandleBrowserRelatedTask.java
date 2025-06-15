@@ -1,3 +1,4 @@
+import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 
 public class HandleBrowserRelatedTask extends DriverSetup {
@@ -33,6 +34,12 @@ public class HandleBrowserRelatedTask extends DriverSetup {
 
         driver.navigate().refresh();
         Thread.sleep(3000);
+
+        driver.switchTo().newWindow(WindowType.TAB);
+        driver.get("https://x.com");
+
+        driver.switchTo().newWindow(WindowType.WINDOW);
+        driver.get("https://www.instagram");
 
 
     }
