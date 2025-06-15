@@ -19,6 +19,8 @@ public class HandleBrowserRelatedTask extends DriverSetup {
         driver.manage().window().minimize();
         Thread.sleep(3000);
 
+        driver.manage().window().fullscreen();
+        Thread.sleep(3000);
 
 
     }
