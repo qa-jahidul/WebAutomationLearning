@@ -1,6 +1,9 @@
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HandleBrowserRelatedTask extends DriverSetup {
     @Test
     public void testBrowserTask() throws InterruptedException {
@@ -24,22 +27,28 @@ public class HandleBrowserRelatedTask extends DriverSetup {
         Thread.sleep(1000);
 
         driver.navigate().to("https://www.facebook.com");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         driver.navigate().back();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         driver.navigate().forward();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         driver.navigate().refresh();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         driver.switchTo().newWindow(WindowType.TAB);
         driver.get("https://x.com");
 
         driver.switchTo().newWindow(WindowType.WINDOW);
-        driver.get("https://www.instagram");
+        driver.get("https://www.instagram.com/");
+        Thread.sleep(3000);
+
+        String tabHandle = driver.getWindowHandle();
+        System.out.println("Insta: "+ tabHandle);
+
+
 
 
     }
