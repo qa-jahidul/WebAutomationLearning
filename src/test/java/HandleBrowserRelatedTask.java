@@ -48,7 +48,10 @@ public class HandleBrowserRelatedTask extends DriverSetup {
         String tabHandle = driver.getWindowHandle();
         System.out.println("Insta: "+ tabHandle);
 
-
+        List<String> handles = new ArrayList<>(driver.getWindowHandles());
+        for (String handle: handles){
+            System.out.println(handle);
+        }
 
 
     }
