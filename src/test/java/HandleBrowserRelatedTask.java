@@ -53,6 +53,15 @@ public class HandleBrowserRelatedTask extends DriverSetup {
             System.out.println(handle);
         }
 
+        System.out.println("Before Switching: "+ driver.getCurrentUrl());
+
+        driver.switchTo().window(handles.get(0));
+
+        System.out.println("After Switching: "+ driver.getCurrentUrl());
+
+        driver.close();
+        Thread.sleep(3000);
+
 
     }
 
