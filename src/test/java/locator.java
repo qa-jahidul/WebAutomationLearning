@@ -10,8 +10,8 @@ public class locator extends DriverSetup{
         Thread.sleep(1000);
 
         WebElement searchArea;
-        searchArea = driver.findElement(By.id("APjFqb"));
-
+//        searchArea = driver.findElement(By.id("APjFqb"));
+        searchArea = driver.findElement(By.className("gLFyf"));
 
         searchArea.sendKeys("Bangladesh");
         Thread.sleep(2000);
