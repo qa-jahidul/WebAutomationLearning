@@ -17,8 +17,10 @@ public class locator extends DriverSetup{
 //        searchArea = driver.findElement(By.cssSelector("#APjFqb"));
         searchArea = driver.findElement(By.xpath("//*[@id=\"APjFqb\"]"));
 
-
         searchArea.sendKeys("Bangladesh");
+        Thread.sleep(2000);
+
+        driver.findElement(By.linkText("Gmail")).click();
         Thread.sleep(2000);
     }
 }
