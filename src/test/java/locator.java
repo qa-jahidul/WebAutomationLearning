@@ -12,7 +12,9 @@ public class locator extends DriverSetup{
         WebElement searchArea;
 //        searchArea = driver.findElement(By.id("APjFqb"));
 //        searchArea = driver.findElement(By.className("gLFyf"));
-        searchArea = driver.findElement(By.name("q"));
+//        searchArea = driver.findElement(By.name("q"));
+        searchArea = driver.findElement(By.tagName("textarea"));
+
 
         searchArea.sendKeys("Bangladesh");
         Thread.sleep(2000);
