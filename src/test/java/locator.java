@@ -16,7 +16,8 @@ public class locator extends DriverSetup{
 //        searchArea = driver.findElement(By.tagName("textarea"));
 //        searchArea = driver.findElement(By.cssSelector("#APjFqb"));
 //        searchArea = driver.findElement(By.xpath("//*[@id=\"APjFqb\"]"));
-        searchArea = driver.findElement(By.xpath("//textarea[@name='q']"));
+//        searchArea = driver.findElement(By.xpath("//textarea[@name='q']"));
+        searchArea = driver.findElement(By.xpath("//textarea[@class='gLFyf']"));
 
         searchArea.sendKeys("Bangladesh");
         Thread.sleep(2000);
