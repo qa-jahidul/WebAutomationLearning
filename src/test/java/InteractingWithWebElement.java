@@ -17,13 +17,17 @@ public class InteractingWithWebElement extends DriverSetup{
         radiobtn2.click();
         Thread.sleep(1000);
 
+        WebElement name = driver.findElement(By.cssSelector("#name"));
         //sendKeys command
-        driver.findElement(By.cssSelector("#name")).sendKeys("Jahidul");
-        Thread.sleep(2000);
-
+        name.sendKeys("Jahidul");
+        Thread.sleep(1000);
         //Clear command
-        driver.findElement(By.cssSelector("#name")).clear();
-        Thread.sleep(2000);
+        name.clear();
+        Thread.sleep(1000);
+        //Get attribute
+        String placeholderText = name.getAttribute("placeholder");
+        System.out.println(placeholderText);
+        Thread.sleep(3000);
 
     }
 }
