@@ -43,5 +43,8 @@ public class InteractingWithWebElement extends DriverSetup{
 
         driver.findElement(By.cssSelector("#hide-textbox")).click();
         System.out.println(show_hide_box.isDisplayed());
+
+        WebElement checkBoxOption1 = driver.findElement(By.id("checkBoxOption1"));
+        System.out.println("Checkbox status: "+ checkBoxOption1.isEnabled());
     }
 }
