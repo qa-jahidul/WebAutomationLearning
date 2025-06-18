@@ -33,5 +33,9 @@ public class InteractingWithWebElement extends DriverSetup{
         WebElement openTab = driver.findElement(By.cssSelector("#opentab"));
         String color = openTab.getCssValue("background-color");
         System.out.println(color);
+
+        WebElement radioBtn1 = driver.findElement(By.cssSelector("input[value='radio1']"));
+        System.out.println("Btn1: " +radioBtn1.isSelected());
+        System.out.println("Btn2: "+ radiobtn2.isSelected());
     }
 }
