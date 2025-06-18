@@ -27,7 +27,11 @@ public class InteractingWithWebElement extends DriverSetup{
         //Get attribute
         String placeholderText = name.getAttribute("placeholder");
         System.out.println(placeholderText);
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
+        // Get Css value
+        WebElement openTab = driver.findElement(By.cssSelector("#opentab"));
+        String color = openTab.getCssValue("background-color");
+        System.out.println(color);
     }
 }
