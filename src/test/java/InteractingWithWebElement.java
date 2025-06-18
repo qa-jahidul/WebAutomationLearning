@@ -14,7 +14,11 @@ public class InteractingWithWebElement extends DriverSetup{
 
         WebElement radiobtn2 = driver.findElement(By.cssSelector("input[value='radio2']"));
         radiobtn2.click();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
+
+        driver.findElement(By.cssSelector("#name")).sendKeys("Jahidul");
+        Thread.sleep(2000);
+
 
     }
 }
