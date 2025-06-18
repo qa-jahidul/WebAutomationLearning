@@ -12,16 +12,20 @@ public class HandleDropdownWithSelect extends DriverSetup{
         Select select = new Select(selectElement);
 
         selectElement.click();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         //select by index
         select.selectByIndex(2);
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         //select by visible text
         select.selectByVisibleText("Option3");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         //select by value
         select.selectByValue("option1");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
+        //select first option
+        WebElement selected_option = select.getFirstSelectedOption();
+        System.out.println(selected_option.getText());
+
     }
 }
