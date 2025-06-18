@@ -37,5 +37,11 @@ public class InteractingWithWebElement extends DriverSetup{
         WebElement radioBtn1 = driver.findElement(By.cssSelector("input[value='radio1']"));
         System.out.println("Btn1: " +radioBtn1.isSelected());
         System.out.println("Btn2: "+ radiobtn2.isSelected());
+
+        WebElement show_hide_box = driver.findElement(By.xpath("//input[@id='displayed-text']"));
+        System.out.println(show_hide_box.isDisplayed());
+
+        driver.findElement(By.cssSelector("#hide-textbox")).click();
+        System.out.println(show_hide_box.isDisplayed());
     }
 }
