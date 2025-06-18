@@ -16,5 +16,7 @@ public class HandleDropdownWithSelect extends DriverSetup{
 
         select.selectByIndex(2);
         Thread.sleep(3000);
+        select.selectByVisibleText("Option3");
+        Thread.sleep(2000);
     }
 }
